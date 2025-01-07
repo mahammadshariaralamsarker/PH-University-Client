@@ -1,10 +1,4 @@
 import { Layout, Menu } from "antd";
-import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
-import { createElement } from "react";
 const { Header, Content, Footer, Sider } = Layout;
 const items = [
   {
@@ -17,7 +11,17 @@ const items = [
   },
   {
     key:3,
-    label:'Content'
+    label:'User Management',
+    Children:[
+      {
+        key:1,
+        label:'Create Admin',
+      },
+      {
+        key:2,
+        label:'Create User'
+      }
+    ]
   },
 ]
 export default function MainLayOut() {
