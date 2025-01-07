@@ -1,10 +1,11 @@
 import "./App.css";
+import MainLayOut from "./components/layout/MainLayOut";
 
 function App() {
 
   return (
     <>
-      <h1>Ph university project</h1>
+      <MainLayOut/>
     </>
   );
 }
