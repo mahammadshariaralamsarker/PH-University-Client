@@ -1,6 +1,6 @@
-import { Layout, Menu } from "antd";
+import { Layout, Menu, MenuProps } from "antd";
 const { Header, Content, Footer, Sider } = Layout;
-const items = [
+const items :MenuProps['items'] = [
   {
     key:1,
     label:'Dashboard'
@@ -12,13 +12,13 @@ const items = [
   {
     key:3,
     label:'User Management',
-    Children:[
+    children:[
       {
-        key:1,
+        key:11,
         label:'Create Admin',
       },
       {
-        key:2,
+        key:22,
         label:'Create User'
       }
     ]
@@ -40,6 +40,9 @@ export default function MainLayOut() {
           }}
         >
           <div className="demo-logo-vertical" />
+          <div style={{color:'white', textAlign:'center', height:'3rem'}}>
+            <h1>PH</h1>
+          </div>
           <Menu
             theme="dark"
             mode="inline"
