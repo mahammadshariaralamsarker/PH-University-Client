@@ -1,34 +1,34 @@
 import { Layout, Menu, MenuProps } from "antd";
 const { Header, Content, Footer, Sider } = Layout;
-const items :MenuProps['items'] = [
+const items: MenuProps["items"] = [
   {
-    key:1,
-    label:'Dashboard'
+    key: 1,
+    label: "Dashboard",
   },
   {
-    key:2,
-    label:'Profile'
+    key: 2,
+    label: "Profile",
   },
   {
-    key:3,
-    label:'User Management',
-    children:[
+    key: 3,
+    label: "User Management",
+    children: [
       {
-        key:11,
-        label:'Create Admin',
+        key: 11,
+        label: "Create Admin",
       },
       {
-        key:22,
-        label:'Create User'
-      }
-    ]
+        key: 22,
+        label: "Create User",
+      },
+    ],
   },
-]
+];
 export default function MainLayOut() {
   return (
     <div>
       {" "}
-      <Layout style={{height:'100vh'}}>
+      <Layout style={{ height: "100vh" }}>
         <Sider
           breakpoint="lg"
           collapsedWidth="0"
@@ -40,7 +40,16 @@ export default function MainLayOut() {
           }}
         >
           <div className="demo-logo-vertical" />
-          <div style={{color:'white', textAlign:'center', height:'3rem'}}>
+          <div
+            style={{
+              color: "white",
+              textAlign: "center",
+              height: "3rem",
+              display:'flex',
+              justifyContent:'center',
+              alignItems:'center',
+            }}
+          >
             <h1>PH</h1>
           </div>
           <Menu
@@ -51,7 +60,7 @@ export default function MainLayOut() {
           />
         </Sider>
         <Layout>
-          <Header style={{ padding: 0,  }} />
+          <Header style={{ padding: 0 }} />
           <Content style={{ margin: "24px 16px 0" }}>
             <div
               style={{
