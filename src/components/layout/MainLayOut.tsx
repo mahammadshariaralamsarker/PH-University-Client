@@ -7,15 +7,19 @@ import {
 import { createElement } from "react";
 const { Header, Content, Footer, Sider } = Layout;
 const items = [
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-  UserOutlined,
-].map((icon, index) => ({
-  key: String(index + 1),
-  icon: createElement(icon),
-  label: `nav ${index + 1}`,
-}));
+  {
+    key:1,
+    label:'Dashboard'
+  },
+  {
+    key:2,
+    label:'Profile'
+  },
+  {
+    key:3,
+    label:'Content'
+  },
+]
 export default function MainLayOut() {
   return (
     <div>
