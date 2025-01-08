@@ -9,6 +9,7 @@ import CreateStudent from "../pages/admin/CreateStudent";
 import AdminLayOut from "../components/layout/AdminLayOut";
 import CreateAdmin from "../pages/admin/CreateAdmin";
 import CreateFaculty from "../pages/admin/CreateFaculty";
+import MainLayOut from "../components/layout/MainLayOut";
 
 export const router = createBrowserRouter([
   {
@@ -20,10 +21,9 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    path: "/admin",
-    element: <AdminLayOut />,
+    path: "admin",
+    element: <AdminDashBoard />,
     children: [
-      { index: true, element: <AdminDashBoard /> },
       { path: "create-student", element: <CreateStudent /> },
       { path: "create-admin", element: <CreateAdmin /> },
       { path: "create-faculty", element: <CreateFaculty /> },
