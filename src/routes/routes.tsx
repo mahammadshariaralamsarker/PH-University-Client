@@ -5,7 +5,7 @@ import About from "../pages/about";
 import Login from "../pages/login";
 import Register from "../pages/register";
 import AdminDashBoard from "../pages/admin/AdminDashBoard";
-import CreateStudent from "../pages/student/CreateStudent";
+import CreateStudent from "../pages/admin/CreateStudent";
 import AdminLayOut from "../components/layout/AdminLayOut";
 
 export const router = createBrowserRouter([
