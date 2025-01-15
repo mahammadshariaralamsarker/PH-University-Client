@@ -22,4 +22,8 @@ const adminPaths2 = [
   },
 ];
 
-const newArray = adminPaths2.reduce((acc, item) => {},[])
+const newArray = adminPaths2.reduce((acc, item) => {
+  acc.push(item)
+  return acc
+},[])
+console.log(newArray);
