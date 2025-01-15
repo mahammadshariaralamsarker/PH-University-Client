@@ -1,7 +1,25 @@
-const arr = [1,2, 3, 4 ]
-const result =arr.reduce ((acc,item)=>{
-  console.log(acc);
-  return acc+item
-},0)
+const adminPaths2 = [
+  { name: "Dashboard", path: "/admin/dashboard", element: "ADMIN-DASHBOARD" },
+  {
+    name: "User Management",
+    children: [
+      {
+        name: "Create Admin",
+        path: "/admin/create-admin",
+        element: "CREATE-ADMIN",
+      },
+      {
+        name: "Create Faculty",
+        path: "/admin/create-faculty",
+        element: "CREATE-FACULTY",
+      },
+      {
+        name: "Create Student",
+        path: "/admin/create-student",
+        element: "CREATE-STUDENT",
+      },
+    ],
+  },
+];
 
-console.log("final Result",result);
+const newArray = adminPaths2.reduce((acc, item) => {},[])
