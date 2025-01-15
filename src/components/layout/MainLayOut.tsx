@@ -12,7 +12,7 @@ const items: MenuProps["items"] = [
     children: [
       {
         key: 11,
-        label: <NavLink to="/admin/create-student"> Create Student</NavLink>,
+        label: <NavLink to="/admin/create-admin"> Create Admin</NavLink>,
       },
       {
         key: 12,
