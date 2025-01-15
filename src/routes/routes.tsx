@@ -3,13 +3,10 @@ import App from "../App";
 import Contact from "../pages/contact";
 import About from "../pages/about";
 import Login from "../pages/login";
-import Register from "../pages/register";
-import AdminDashBoard from "../pages/admin/AdminDashBoard";
-import CreateStudent from "../pages/admin/CreateStudent";
-import AdminLayOut from "../components/layout/AdminLayOut";
+import Register from "../pages/register"; 
+import CreateStudent from "../pages/admin/CreateStudent"; 
 import CreateAdmin from "../pages/admin/CreateAdmin";
-import CreateFaculty from "../pages/admin/CreateFaculty";
-import MainLayOut from "../components/layout/MainLayOut";
+import CreateFaculty from "../pages/admin/CreateFaculty"; 
 
 export const router = createBrowserRouter([
   {
@@ -21,22 +18,14 @@ export const router = createBrowserRouter([
     ],
   },
   {
-    path: "admin",
-    element: <AdminDashBoard />,
+    path: "/admin",
+    element: <App />,
     children: [
       { path: "create-student", element: <CreateStudent /> },
       { path: "create-admin", element: <CreateAdmin /> },
       { path: "create-faculty", element: <CreateFaculty /> },
     ],
-  },
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      { path: "contact", element: <Contact /> },
-      { path: "about", element: <About /> },
-    ],
-  },
+  }, 
   { path: "login", element: <Login /> },
   { path: "register", element: <Register /> },
 ]);
