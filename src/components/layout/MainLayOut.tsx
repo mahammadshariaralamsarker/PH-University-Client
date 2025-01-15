@@ -3,32 +3,24 @@ import { NavLink, Outlet } from "react-router-dom";
 const { Header, Content, Footer, Sider } = Layout;
 const items: MenuProps["items"] = [
   {
-    key: 'Dashboard',
-    label:<NavLink to='/admin/dashboard'>Dashboard</NavLink>,
+    key: "Dashboard",
+    label: <NavLink to="/admin/dashboard">Dashboard</NavLink>,
   },
   {
-    key: 2,
-    label: "Profile",
-  },
-  {
-    key: 3,
+    key: "User Management",
     label: "User Management",
     children: [
       {
         key: 11,
-        label: <NavLink to='/admin/create-student'> Create Student</NavLink>,
+        label: <NavLink to="/admin/create-student"> Create Student</NavLink>,
       },
       {
         key: 12,
-        label: <NavLink to='/admin/create-faculty'> Create Faculty</NavLink>,
+        label: <NavLink to="/admin/create-faculty"> Create Faculty</NavLink>,
       },
       {
         key: 13,
-        label: <NavLink to='/admin/create-student'> Create Student</NavLink>,
-      },
-      {
-        key: 22,
-        label: "Create User",
+        label: <NavLink to="/admin/create-student"> Create Student</NavLink>,
       },
     ],
   },
@@ -54,9 +46,9 @@ export default function MainLayOut() {
               color: "white",
               textAlign: "center",
               height: "3rem",
-              display:'flex',
-              justifyContent:'center',
-              alignItems:'center',
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
             <h1>PH</h1>
@@ -77,7 +69,7 @@ export default function MainLayOut() {
                 minHeight: 360,
               }}
             >
-              <Outlet/>
+              <Outlet />
             </div>
           </Content>
           <Footer style={{ textAlign: "center" }}>
