@@ -9,19 +9,19 @@ const adminPaths2 = [
     name: "User Management",
     children: [
       {
-        name: "Dashboard",
-        path: "/admin/dashboard",
-        element: <AdminDashBoard />,
+        name: "Create Admin",
+        path: "/admin/create-admin",
+        element: <CreateAdmin />,
       },
       {
-        name: "Dashboard",
-        path: "/admin/dashboard",
-        element: <AdminDashBoard />,
+        name: "Create Faculty",
+        path: "/admin/create-faculty",
+        element: <CreateFaculty />,
       },
       {
-        name: "Dashboard",
-        path: "/admin/dashboard",
-        element: <AdminDashBoard />,
+        name: "Create Student",
+        path: "/admin/create-student",
+        element: <CreateStudent />,
       },
     ],
   },
