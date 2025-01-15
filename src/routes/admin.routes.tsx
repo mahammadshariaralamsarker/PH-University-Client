@@ -25,7 +25,7 @@ const adminPaths2 = [
       },
     ],
   },
-  {
+  /* {
     name: "Course Management",
     children: [ 
       {
@@ -34,7 +34,7 @@ const adminPaths2 = [
         element: <CreateFaculty />,
       }, 
     ],
-  },
+  }, */
 ];
 
 export const adminPaths = [
