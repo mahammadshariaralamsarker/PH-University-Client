@@ -5,6 +5,7 @@ import About from "../pages/about";
 import Login from "../pages/login";
 import Register from "../pages/register"; 
 import { adminPaths } from "./admin.routes";
+import AdminDashBoard from "../pages/admin/AdminDashBoard";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,7 @@ export const router = createBrowserRouter([
     element: <App />,
     children: adminPaths,
   },
+
   {
     path: "/faculty",
     element: <App />,
