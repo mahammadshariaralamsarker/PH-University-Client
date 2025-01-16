@@ -23,7 +23,13 @@ const adminPaths2 = [
 ];
 
 const newArray = adminPaths2.reduce((acc, item) => {
-  acc.push(item)
+  if(item.path && item.element){
+    acc.push({
+      path:item.path,
+      item:item.element
+    })
+  }
+  // acc.push(item)
   return acc
 },[])
-console.log(newArray);
+console.log(newArray);afa
