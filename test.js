@@ -32,4 +32,4 @@ const newArray = adminPaths2.reduce((acc, item) => {
   // acc.push(item)
   return acc
 },[])
-console.log(newArray);afa
+console.log(newArray);
