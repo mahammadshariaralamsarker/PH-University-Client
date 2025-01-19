@@ -1,5 +1,7 @@
+import { TSideBarItem } from "../types"
+
  
-import { TSideBarItem } from "../types/Sidebar.type"
+
 
 
 
