@@ -1,11 +1,11 @@
-import { TSideBarItem } from "../types"
+import { TSideBarItem, TUserPath } from "../types"
 
  
 
 
 
 
-const sidebarItemsGenerator = (itmes) =>{
+const sidebarItemsGenerator = (itmes:TUserPath[]) =>{
    const sidebarItems = itmes.reduce((acc:TSideBarItem[], item) => {
     if (item.path && item.element) {
       acc.push({
