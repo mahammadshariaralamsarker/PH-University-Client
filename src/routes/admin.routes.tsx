@@ -1,45 +1,83 @@
+import { ReactNode } from "react";
 import AdminDashBoard from "../pages/admin/AdminDashBoard";
 import CreateAdmin from "../pages/admin/CreateAdmin";
 import CreateFaculty from "../pages/admin/CreateFaculty";
 import CreateStudent from "../pages/admin/CreateStudent";
+import { NavLink } from "react-router-dom";
+type TRoute = {
+  path:string,
+  element:ReactNode
+}
 
-const adminPaths2 = [
-  { name: "Dashboard", path: "/admin/dashboard", element: <AdminDashBoard /> },
+type TSideBarItem={
+  key:string,
+  label:ReactNode,
+  children?:TSideBarItem[],
+}
+const adminPaths = [
+  { name: "Dashboard", path: "dashboard", element: <AdminDashBoard /> },
   {
     name: "User Management",
     children: [
       {
         name: "Create Admin",
-        path: "/admin/create-admin",
+        path: "create-admin",
         element: <CreateAdmin />,
       },
       {
         name: "Create Faculty",
-        path: "/admin/create-faculty",
+        path: "create-faculty",
         element: <CreateFaculty />,
       },
       {
         name: "Create Student",
-        path: "/admin/create-student",
+        path: "create-student",
         element: <CreateStudent />,
       },
     ],
   },
-  /* {
-    name: "Course Management",
-    children: [ 
-      {
-        name: "Offered Course",
-        path: "/admin/offered-course",
-        element: <CreateFaculty />,
-      }, 
-    ],
-  }, */
+
 ];
 
-export const adminPaths = [
-  { path: "dashboard", element: <AdminDashBoard /> },
-  { path: "create-student", element: <CreateStudent /> },
-  { path: "create-admin", element: <CreateAdmin /> },
-  { path: "create-faculty", element: <CreateFaculty /> },
-];
+
+
+
+export const adminRoutes = adminPaths.reduce((acc:TRoute[], item) => {
+  if (item.path && item.element) {
+    acc.push({
+      path: item.path,
+      element: item.element
+    })
+  }
+  if (item.children) {
+    item.children.forEach(child => {
+      acc.push({
+        path: child.path,
+        element: child.element
+      })
+    });
+  }
+  return acc
+}, [])
+
+
+export const adminSideBarItems = adminPaths.reduce((acc:TSideBarItem[], item) => {
+  if (item.path && item.element) {
+    acc.push({
+      key: item.path,
+      label: <NavLink to={`/admin/${item.path}`}>{item.name}</NavLink>
+    })
+  }
+  if (item.children) {
+    acc.push({
+      key: item.name,
+      label: item.name,
+      children: item.children.map((child) => ({
+        key: child.name,
+        label: <NavLink to={`/admin/${child.path}`}>{child.name}</NavLink>
+    }))
+    })
+  }
+  // acc.push(item)
+  return acc
+}, [])
