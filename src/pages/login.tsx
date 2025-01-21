@@ -33,7 +33,7 @@ export default function Login() {
         <label htmlFor="password">Password:</label>
         <input type="text" id="password" {...register("password")} />
       </div>
-      <Button htmlType="submit">Login</Button>df
+      <Button htmlType="submit">Login</Button>
     </form>
   );
 }
