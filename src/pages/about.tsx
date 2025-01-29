@@ -1,7 +1,9 @@
-import React from 'react'
-
-export default function About() {
+const About = () => {
   return (
-    <div>about page</div>
-  )
-}
+    <div>
+      <h1> This is About component </h1>
+    </div>
+  );
+};
+
+export default About;

@@ -1,4 +1,4 @@
-import { TRoute, TUserPath } from "../types";
+import { TRoute, TUserPath } from '../types';
 
 export const routeGenerator = (items: TUserPath[]) => {
   const routes = items.reduce((acc: TRoute[], item) => {
@@ -8,6 +8,7 @@ export const routeGenerator = (items: TUserPath[]) => {
         element: item.element,
       });
     }
+
     if (item.children) {
       item.children.forEach((child) => {
         acc.push({
@@ -16,6 +17,7 @@ export const routeGenerator = (items: TUserPath[]) => {
         });
       });
     }
+
     return acc;
   }, []);
 

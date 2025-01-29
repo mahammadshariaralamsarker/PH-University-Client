@@ -1,12 +1,11 @@
-import "./App.css";
-import MainLayOut from "./components/layout/MainLayOut";
+import MainLayout from './components/layout/MainLayout';
+import ProtectedRoute from './components/layout/ProtectedRoute';
 
 function App() {
   return (
-    <>
-      <MainLayOut />
-      
-    </>
+    <ProtectedRoute role={undefined}>
+      <MainLayout />
+    </ProtectedRoute>
   );
 }
 
